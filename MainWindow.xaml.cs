@@ -30,10 +30,16 @@ namespace MaterialMaker {
 
             try {
                 seed = (int)Convert.ToInt32(SeedSpace.Text);
-                size = (int)Convert.ToInt32(imgSize.Text);
             } catch {
                 seed = 0;
+                MessageBox.Show("invalid seed. Seed set to 0.");
+            }
+
+            try {
+                size = (int)Convert.ToInt32(imgSize.Text);
+            } catch {
                 size = 250;
+                MessageBox.Show("Invalid size. Size set to 250.");
             }
 
             float[,] randomInts = RandomPlot.randomArray(seed, size, size);
