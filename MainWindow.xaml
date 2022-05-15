@@ -1,0 +1,27 @@
+﻿<Window x:Class="MaterialMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaterialMaker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1500">
+    <Grid>
+        <Rectangle x:Name="Background" Fill ="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button x:Name="Reload" Content="Reload image" HorizontalAlignment="Left" Margin="32,33,0,0" VerticalAlignment="Top" Click="Reload_Click"/>
+
+        <Image x:Name="MapImage" Margin="70,140,0,0" Width="600" Height="600" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="NormalImage" Margin="800,140,0,0" Width="600" Height="600" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,62,0,0" Click="Save_Click"/>
+        <Button x:Name="SaveNormal" Content="Save Normal Map" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="44,62,0,0" Click="SaveNormal_Click"/>
+
+        <TextBox x:Name="SeedSpace" HorizontalAlignment="Left" Margin="145,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="SeedSpace_PreviewTextInput"/>
+        <TextBox x:Name="filePath" HorizontalAlignment="Left" Margin="300,33,0,0" TextWrapping="Wrap" Text="C:\\mapOutput" VerticalAlignment="Top" Width="120" TextChanged="filePath_TextChanged"/>
+        <TextBox x:Name="imgSize" HorizontalAlignment="Left" Margin="450,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="imgSize_PreviewTextInput"  Text="1000"/>
+
+        <TextBlock TextWrapping="Wrap" Text="Seed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="192,10,0,0"/>
+        <TextBlock TextWrapping="Wrap" Text="Filepath" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,10,0,0"/>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,10,0,0" Text="Size"/>
+    </Grid>
+</Window>
